@@ -55,8 +55,22 @@ describe( 'Basket', function() {
     basket.add( store['steak']);
     basket.add( store['steak']);
     basket.add( store['steak']);
+    console.log( basket.items )
     basket.customerDiscount( true );
     assert.equal( 20.52, basket.total );
+  })
+
+  it( 'Should sort the basket alphebetically', function() {
+    basket.items = [];
+    basket.total = 0;
+    basket.add( store['steak']);
+    basket.add( store['crisps']);
+    basket.add( store['bananas']);
+    basket.add( store['steak']);
+    basket.add( store['steak']);
+    basket.add( store['steak']);
+    basket.bogof();
+    console.log( basket.total );
   })
 
 } )

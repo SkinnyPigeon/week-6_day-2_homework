@@ -25,4 +25,3 @@ var irnBru = {
 var store = { crisps, bananas, steak, irnBru };
 
 module.exports = store;
-// console.log(store['crisps'].price)

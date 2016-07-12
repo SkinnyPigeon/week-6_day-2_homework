@@ -36,8 +36,26 @@ var basket = {
     }
   },
 
+  bogof: function() {
+   this.items.sort(function(a, b){
+    var x = a.name.toLowerCase();
+    var y = b.name.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  })
+   for ( var i = 0; i < this.items.length; i++ ) {
+     if( this.items[i] === this.items[ i + 1 ]) {
+        this.total -= this.items[i].price;
+        // i + 1;
+     }
+   }
+ }
+
+
 }
 module.exports.basket = basket;
+
 
 
 
