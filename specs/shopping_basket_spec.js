@@ -26,7 +26,6 @@ describe( 'Basket', function() {
   it( 'Should remove item from basket', function() {
     basket.items = [];
     basket.add( store['crisps'] );
-    console.log( basket.items)
     basket.remove( store['crisps'] );
     assert.equal( 0, basket.totalItems() );
   })
@@ -46,7 +45,7 @@ describe( 'Basket', function() {
     basket.add( store['steak']);
     basket.add( store['steak']);
     basket.add( store['steak']);
-    basket.bulkDiscount();
+    basket.bulkDiscount( true );
     assert.equal( 21.6, basket.total );
   })
 
@@ -56,7 +55,7 @@ describe( 'Basket', function() {
     basket.add( store['steak']);
     basket.add( store['steak']);
     basket.add( store['steak']);
-    basket.customerDiscount();
+    basket.customerDiscount( true );
     assert.equal( 20.52, basket.total );
   })
 

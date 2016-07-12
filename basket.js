@@ -24,13 +24,13 @@ var basket = {
       }
     }
   },
-  bulkDiscount: function() {
-    if( this.total >= 20 ){
+  bulkDiscount: function( valid ) {
+    if( ( this.total >= 20 ) && ( valid === true )){
       this.total *= 0.9;
     }
   },
-  customerDiscount: function() {
-    if( this.total >= 20 ){
+  customerDiscount: function( valid ) {
+    if( ( this.total >= 20 ) && ( valid === true )){
       this.total *= 0.9;
       this.total *= 0.95;
     }
