@@ -1,4 +1,5 @@
-var crisps = require( '../item' );
+var crisps = require( '../item' ).crisps;
+
 var assert = require( 'chai' ).assert;
 
 describe( 'Item', function() {
