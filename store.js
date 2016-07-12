@@ -2,6 +2,7 @@ var crisps = {
   name: "crisps",
   price: 1.50
 }
+
 var bananas = {
   name: "bananas",
   price: 0.50
@@ -20,4 +21,4 @@ var irnBru = {
 var store = { crisps, bananas, steak, irnBru };
 
 module.exports = store;
-console.log(store.crisps.price)
+// console.log(store['crisps'].price)

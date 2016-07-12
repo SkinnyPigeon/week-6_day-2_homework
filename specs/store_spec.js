@@ -1,4 +1,4 @@
-var store = require( '../item' );
+var store = require( '../store' );
 
 var assert = require( 'chai' ).assert;
 
@@ -11,4 +11,4 @@ describe( 'Item', function() {
 
   
 
-} )
+} ) 

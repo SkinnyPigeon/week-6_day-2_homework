@@ -1,7 +1,4 @@
-var crisps = require( './item' ).crisps;
-var bananas = require( './item' ).bananas;
-var steak = require( './item' ).steak;
-var irnBru = require( './item' ).irnBru;
+var store = require( './store');
 
 var basket = {
   items: [],
@@ -11,7 +8,7 @@ var basket = {
   },
   add: function( item ) {
     this.items.push( item )
+    this.total += item.price
   }
 }
-console.log( crisps )
 module.exports.basket = basket;
