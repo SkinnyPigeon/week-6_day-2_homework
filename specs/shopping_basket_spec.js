@@ -18,12 +18,25 @@ describe( 'Basket', function() {
   })
 
   it( 'Should increase basket total', function() {
-    basket.total = 0
-    basket.add( store['crisps'] )
+    basket.total = 0;
+    basket.add( store['crisps'] );
     assert.equal( 1.5, basket.total );
-
   })
 
-  console.log( store['crisps'])
+  it( 'Should remove item from basket', function() {
+    basket.items = [];
+    basket.add( store['crisps'] );
+    // console.log( basket.items)
+    basket.remove( store['crisps'] );
+    assert.equal( 0, basket.totalItems() );
+  })
+
+  it( 'Should reduce basket total', function() {
+    basket.items = [];
+    basket.total = 0;
+    basket.add( store['crisps']);
+    basket.remove( store['crisps'] );
+    assert.equal( 0, basket.total );
+  })
 
 } )
