@@ -55,12 +55,12 @@ describe( 'Basket', function() {
     basket.add( store['steak']);
     basket.add( store['steak']);
     basket.add( store['steak']);
-    console.log( basket.items )
+    // console.log( basket.items )
     basket.customerDiscount( true );
     assert.equal( 20.52, basket.total );
   })
 
-  it( 'Should sort the basket alphebetically', function() {
+  it( 'Should sort the basket then do bogof', function() {
     basket.items = [];
     basket.total = 0;
     basket.add( store['steak']);
@@ -68,9 +68,15 @@ describe( 'Basket', function() {
     basket.add( store['bananas']);
     basket.add( store['steak']);
     basket.add( store['steak']);
+    basket.add( store['bananas']);
     basket.add( store['steak']);
+    basket.add( store['bananas']);
+    basket.add( store['steak']);
+    basket.add( store['crisps']);
+    basket.add( store['crisps']);
+    basket.add( store['crisps']);
     basket.bogof();
-    console.log( basket.total );
+    assert.equal( 44.5, basket.total );
   })
 
 } )
