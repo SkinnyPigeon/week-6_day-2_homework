@@ -1,26 +1,23 @@
-var item = {
-  price: 0
+var crisps = {
+  name: "crisps",
+  price: 1.50
+}
+var bananas = {
+  name: "bananas",
+  price: 0.50
 }
 
-var crisps = Object.create( item );
-crisps.price = 1.50;
+var steak = {
+  name: "steak",
+  price: 8
+}
 
-var bananas = Object.create( item );
-bananas.price = 0.50;
+var irnBru = {
+  name: "Irn Bru",
+  price: 2.50
+}
 
-var steak = Object.create( item );
-steak.price = 8;
+var store = { crisps, bananas, steak, irnBru };
 
-var irnBru = Object.create( item );
-irnBru.price = 2.50;
-
-console.log('crisps', crisps);
-console.log('bananas', bananas);
-console.log('steack', steak);
-console.log('crisps', crisps);
-
-module.exports.crisps = crisps;
-module.exports.bananas = bananas;
-module.exports.steak = steak;
-module.exports.irnBru = irnBru;
-
+module.exports = store;
+console.log(store.crisps.price)

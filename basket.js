@@ -8,7 +8,10 @@ var basket = {
   total: 0,
   totalItems: function() {
     return this.items.length
+  },
+  add: function( item ) {
+    this.items.push( item )
   }
 }
-
+console.log( crisps )
 module.exports.basket = basket;
